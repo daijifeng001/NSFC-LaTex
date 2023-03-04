@@ -27,7 +27,7 @@
 \newcommand{\alert}[1]{\nsfClr{\emph{#1}}}
 \newcommand{\ContentDes}[1]{
    \setcounter{section}{0}
-   {\vspace*{12pt}} \noindent {\kaishu \nsfcheadsize \bfseries{{\alert{#1}}} }%
+   {\vspace*{12pt}} {\kaishu \nsfcheadsize \bfseries{{\alert{#1}}} }%
 }
 %\setlength{\parskip}{0.5\baselineskip}
 
@@ -51,7 +51,7 @@
 \newcommand{\NsfcSection}[3]{{\nsfcheadsize
   \setcounter{section}{#1}
   \setcounter{subsection}{0}
-  {\vspace*{12pt}} \noindent \nsfClr{#1. }{\kaishu \nsfcheadsize \bfseries{\alert{#2}}}{\kaishu \nsfcheadsize \alert{#3}}%
+  {\vspace*{12pt}} \nsfClr{#1. }{\kaishu \nsfcheadsize \bfseries{\alert{#2}}}{\kaishu \nsfcheadsize \alert{#3}}%
 }}
 
 
@@ -59,11 +59,12 @@
   \textcolor{black}{\hskip 2pt  \emph{\large 参考文献:}}
 }
 
-
 \RequirePackage{cite}
-% \bibliographystyle{unsrt}
-
+\bibliographystyle{unsrt}
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+
+\RequirePackage[numbers,sort&compress]{natbib}
+\setlength{\bibsep}{0.5ex}
 
 \def\cvprsubsection{\@startsection {subsection}{2}{\z@}
    {11pt plus 2pt minus 2pt}{6pt} {\bf}}
@@ -73,10 +74,10 @@
 
 
 \linespread{1.5}
+
 \RequirePackage{caption}
 \captionsetup[table]{font={stretch=1.0}}
 \captionsetup[figure]{font={stretch=1.0}}
-
 
 %%% Make figure placement a little more predictable.
 % We trust the user to move figures if this results
