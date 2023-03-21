@@ -3,6 +3,9 @@
 % by Ming-Ming Cheng https://mmcheng.net
 
 \documentclass[UTF8,12pt,AutoFakeBold]{article}
+% \documentclass[fontset=none]{ctexart}
+% \setCJKmainfont{KaiTi_GB2312} % KaiTi_GB2312
+% \setmainfont{Times New Roman}
 \usepackage[UTF8]{ctex}
 \usepackage{nsfc}
 
@@ -19,19 +22,17 @@
 
 %%%%%%%%% TITLE
 
-\title{报告正文}
+\title{~~~~~报告正文}
 
 \maketitle
 \thispagestyle{empty} 
-
+\vspace{-0.5em}
 {\kaishu{\nsfcheadsize{参照以下提纲撰写，要求内容翔实、清晰，层次分明，标题突出。\nsfClr{\bfseries{请勿删除或改动下述提纲标题及括号中的文字。}}}}}
 
-\ContentDes{（一）立项依据与研究内容（建议8000字以下）：}
-
+\vspace{-0.4em}
+\ContentDes{（一）立项依据与研究内容（建议$\bm{8000}$字以下）：}
 
 \NsfcSection{1}{项目的立项依据}{（研究意义、国内外研究现状及发展动态分析，需结合科学研究发展趋势来论述科学意义；或结合国民经济和社会发展中迫切需要解决的关键科技问题来论述其应用前景。附主要参考文献目录）；}
-
-
 
 
 \subsection{研究意义}
@@ -69,8 +70,8 @@ Ullman\upcite{85HN/KochVisualAttention}的早期工作，以及Itti, Wolfe 等�
 （此部分为重点阐述内容）；}
 
 \subsection{研究目标}
-我们提出了基于全局对比度的显著性计算方法，即基于直方图对比度~(HC) 和基于空间信息增强的区域对比度~(RC)方法。
-HC方法速度快，并且产生细节精确的结果，RC方法可以产生空间增强的高质量显著性图像，但与此同时具有相对较低的计算效率。
+我们提出了基于全局对比度的显著性计算方法，即基于直方图对比度~(HC) 和基于空间信息增强的区域对比度~(\textbf{RC})方法。
+{\bf HC}方法速度快，并且产生细节精确的结果，RC方法可以产生空间增强的高质量显著性图像，但与此同时具有相对较低的计算效率。
 我们在国际上现有最大的公开数据集上测试了我们的方法，并与之前已有八种最好的其它方法进行了比较。
 实验结果表明，我们提出的方法在正确率和召回率上都明显优于其它方法，并且简单而高效。
 

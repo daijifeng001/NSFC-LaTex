@@ -7,6 +7,11 @@
 \setitemize[1]{itemsep=0pt,parsep=0pt,topsep=5pt}
 
 \RequirePackage{times}
+
+% \RequirePackage{newtxtext}
+% \RequirePackage{newtxmath}
+\usepackage{indentfirst}
+
 \RequirePackage{graphicx}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
@@ -14,12 +19,17 @@
 \RequirePackage{xcolor}
 \RequirePackage[pagebackref=false,breaklinks=true,colorlinks=true,bookmarks=false,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 
+\usepackage{amsmath, bm}
+% \RequirePackage{bm}
+% \DeclareRobustCommand\bfseries{\not@math@alphabet\bfseries\mathbf\fontseries\bfdefault\selectfont\boldmath}
+
+
 \RequirePackage[a4paper, left = 3.0cm, right = 3.0cm, top = 2.54cm, bottom = 2.54cm]{geometry}
 
 \pagestyle{empty}
 \thispagestyle{empty}
 
-\definecolor{MSBlue}{rgb}{0.0,0.44,0.753}
+\definecolor{MSBlue}{RGB}{0,112,192}
 \newcommand\nsfctitlesize{\fontsize{16pt}{16pt}\selectfont}
 \newcommand\nsfcheadsize{\fontsize{14pt}{14pt}\selectfont}
 
@@ -27,13 +37,16 @@
 \newcommand{\alert}[1]{\nsfClr{\emph{#1}}}
 \newcommand{\ContentDes}[1]{
    \setcounter{section}{0}
-   {\vspace*{12pt}} {\kaishu \nsfcheadsize \bfseries{{\alert{#1}}} }%
+   {\vspace*{8pt}} \noindent \quad\;\, {\kaishu \nsfcheadsize \bfseries{{\alert{#1}}} }  % align word
 }
 %\setlength{\parskip}{0.5\baselineskip}
 
 
 \def\@maketitle{ %\newpage \null \vskip .01in
-   \begin{center} {\nsfctitlesize\kaishu\bfseries{\@title}\par} \end{center}
+   \begin{center} 
+   \vspace*{-1.4em} % title down
+   {\nsfctitlesize\kaishu\bfseries{\@title}\par}
+   \end{center}
 }
 
 
@@ -51,8 +64,13 @@
 \newcommand{\NsfcSection}[3]{{\nsfcheadsize
   \setcounter{section}{#1}
   \setcounter{subsection}{0}
-  {\vspace*{12pt}} \nsfClr{#1. }{\kaishu \nsfcheadsize \bfseries{\alert{#2}}}{\kaishu \nsfcheadsize \alert{#3}}%
+  {\vspace*{9pt}} {$\bm{\nsfClr{#1.}}$ }{\kaishu \nsfcheadsize \bfseries{\alert{#2}}}{\kaishu \nsfcheadsize \alert{#3}} % align word
 }}
+% \newcommand{\NsfcSection}[3]{{\nsfcheadsize
+%   \setcounter{section}{#1}
+%   \setcounter{subsection}{0}
+%   {\vspace*{9pt}} \nsfClr{{\kaishu #1}. }{\kaishu \nsfcheadsize \bfseries{\alert{#2}}}{\kaishu \nsfcheadsize \alert{#3}} % align word
+% }}
 
 
 \renewcommand\refname{
